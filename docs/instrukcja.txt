@@ -1,0 +1,15 @@
+1) dodaj nowe konto w aplikacji
+2) zaloguj siê na konto admin z has³em admin
+3) wejdŸ do panelu administracyjnego i edytuj utworzonego wczeœniej u¿ytkownika poprzez dodanie mu nowej roli ADMIN
+4) wyloguj sie a nastêpnie zaloguj siê powtórnie i sprawdŸ czy zmiana zosta³a zapisana
+
+
+
+5) Zmodyfikuj serwis UserServiceBean w taki sposób aby role pobierane by³y z bazy danych
+W tym celu:
+6) Nale¿y stworzyæ zapytanie JPQL
+7) Przy pomocy EntityManagera utworzyæ obiekt query podaj¹æ jako parametr przygotowane zapytanie. 
+8) Przekazaæ parametry zapytania do obiektu query.
+9) Pobraæ wyniki zapytania i ustawiæ je na obiekcie modyfikowanego u¿ytkownika.
+
+10) W kodzie UserServiceBeana utwórz funkcjonalnoœæ usuwania u¿ytkowników; w tym celu u¿yj metody EntityManager'a
