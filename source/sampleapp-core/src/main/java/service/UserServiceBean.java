@@ -48,17 +48,7 @@ public class UserServiceBean implements UserServiceLocal {
 	@Override
 	public void updateUser(final UserDTO actualUser) {
 		try {
-			final String jpql = "from Role r where r.name in :names";
-			final TypedQuery<Role> query = manager
-					.createQuery(jpql, Role.class);
-			final List<Role> roles = query.setParameter("names",
-					actualUser.getRoles()).getResultList();
-			LOG.info("updating user with roles {}", roles);
-			final User entity = manager.find(User.class, actualUser.getId());
-			entity.setRoles(roles);
-			entity.setState(actualUser.getState());
-
-			LOG.info("user updated id={}", entity.getId());
+			// zaktualizuj kod 
 		} catch (final Exception ex) {
 			LOG.error("update failed id={}", actualUser.getId(), ex);
 		}
@@ -67,9 +57,7 @@ public class UserServiceBean implements UserServiceLocal {
 	@Override
 	public void deleteUser(UserDTO actualUser) {
 		try {
-			final User entity = manager.find(User.class, actualUser.getId());
-			manager.remove(entity);
-			LOG.info("user deleted id={}", entity.getId());
+			// zaktualizuj kod
 		} catch (Exception ex) {
 			LOG.error("delete failed id={}", actualUser.getId(), ex);
 		}

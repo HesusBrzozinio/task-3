@@ -1,12 +1,15 @@
-Utwórz konstroler o zakresie sesyjnym.
+1) dodaj nowe konto w aplikacji
+2) zaloguj siê na konto admin z has³em admin
+3) wejdŸ do panelu administracyjnego i edytuj utworzonego wczeœniej u¿ytkownika poprzez dodanie mu nowej roli ADMIN
+4) wyloguj sie a nastêpnie zaloguj siê powtórnie i sprawdŸ czy zmiana zosta³a zapisana
 
-W ramach kontrolera utwórz mapê zawieraj¹c¹ nazwê jêzyka jako klucz oraz kod lokali jako wartoœæ
-
-Utwórz metodê nas³uchuj¹c¹ zdarzeñ typu ValueChangeListener (parametr metody), motoda zwraca void.
 
 
-Z obiektu zdarzenia pobierz wartoœæ jaka zosta³a w nim umieszczona i u¿yj jej jako klucza do pobrania wartoœci. Na podstawie pobranej wartoœci utwórz obiekt klasy Locale.
+5) Zmodyfikuj serwis UserServiceBean w taki sposób aby role pobierane by³y z bazy danych
+W tym celu:
+6) Nale¿y stworzyæ zapytanie JPQL
+7) Przy pomocy EntityManagera utworzyæ obiekt query podaj¹æ jako parametr przygotowane zapytanie. 
+8) Przekazaæ parametry zapytania do obiektu query.
+9) Pobraæ wyniki zapytania i ustawiæ je na obiekcie modyfikowanego u¿ytkownika.
 
-Pobierz instancjê klasy FacesContext z u¿yciem jej metody statycznej a nastêpnie pobierz z kontekstu UIViewRoot i umieœæ w nim obiekt Locale.
-
-Na stronie header.xhtml dodaj listê rozwijan¹ z mo¿liwymi do wyboru jêzykami (komponent selectOneMenu). Nale¿y powi¹zaæ komponent z metod¹ kontrolera nas³uhuj¹c¹ zdarzeñ. Zmiana wartoœci w liœcie powinna wywo³ywaæ wbudowan¹ javascriptow¹ metodê submit() - sprawdŸ jakimi atrybutami dysponuje komponent listy rozwijanej. 
+10) W kodzie UserServiceBeana utwórz funkcjonalnoœæ usuwania u¿ytkowników; w tym celu u¿yj metody EntityManager'a
